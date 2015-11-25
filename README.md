@@ -109,4 +109,6 @@ $ ->
       $(".bsn_message").text("geen geldig bsn-nummer")
 ```
 
+[![Gem Version](https://badge.fury.io/rb/elfproef_plan.svg)](https://badge.fury.io/rb/elfproef_plan)
+
 
