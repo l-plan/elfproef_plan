@@ -2,6 +2,7 @@ class ElfProef
     constructor: (nr) ->
       @nr = nr.toString().match(/[\d+$]/g)
       @nrs = [2..9].reverse()
+      @str = @nr.join('')
 
     elfproef: (a) -> 
         @nrs.push(a)
@@ -35,13 +36,17 @@ zip = () ->
 
 $ ->
   $(document).on 'blur', '.checkMyBsn',  ->
-    if new ElfProef(@value).validBsn()
+    bsn = new ElfProef(@value)
+    if bsn.validBsn()
+      $(".checkMyBsn").val(bsn.str) 
       $(".bsn_message").text("ok")
     else
       $(".bsn_message").text("geen geldig bsn-nummer")
 
    $(document).on 'blur', '.checkMyRekening',  ->
-    if new ElfProef(@value).validRekening()
+    rek = new ElfProef(@value)
+    if rek.validRekening()
+      $(".checkMyRekening").val(rek.str) 
       $(".rekening_message").text("ok")
     else
       $(".rekening_message").text("geen geldig rekening-nummer")
