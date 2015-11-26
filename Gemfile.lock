@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    elfproef_plan (0.0.1)
+    elfproef_plan (0.0.2)
       rails (~> 4.0)
 
 GEM
@@ -169,5 +169,4 @@ DEPENDENCIES
   minitest-spec-rails
   mysql2 (= 0.3.18)
   pry-rails
-  rails (~> 4.0)
   selenium-webdriver

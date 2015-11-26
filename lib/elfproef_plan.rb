@@ -18,17 +18,19 @@ module ElfproefPlan
 		attr_accessor :nr, :nrs
 
 		def initialize(nr)
-			@nr = nr.to_s.scan(/[\d+$]/).map{|x| x.to_i}
+			@nr = nr.to_s.scan(/./).map{|x| x.to_i} if nr.to_s.scan(/[\d+$]/)==nr.to_s.scan(/./)
 			@nrs = (2..9).to_a.reverse
 		end
 
 		def validRekening
+			return false unless @nr
 			return false unless [9, 10].include? @nr.length
 			nrs.unshift 10 if @nr.length == 10
 			elfproef(1)
 		end
 
 		def validBsn
+			return false unless @nr
 			return false if @nr.length > 9
 			@nr.unshift 0 while @nr.length < 9
 			return false if @nr[0,3].sum < 1

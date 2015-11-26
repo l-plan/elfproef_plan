@@ -21,7 +21,7 @@ describe ElfproefPlan::ElfProef do
     end
   end
 
-  describe "check elfproef valisBsn method" do
+  describe "check elfproef validBsn method" do
 
     it "check a valid bsn" do
     	@elfproef = ElfproefPlan::ElfProef.new(123456782)
@@ -32,7 +32,7 @@ describe ElfproefPlan::ElfProef do
   end
 
 
-  describe "check elfproef valisRekening method" do
+  describe "check elfproef validRekening method" do
 
     it "check a valid rekeningnummer" do
     	@elfproef = ElfproefPlan::ElfProef.new(123456789)
