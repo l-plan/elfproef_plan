@@ -22,12 +22,4 @@ ActiveRecord::Schema.define(version: 20151120090423) do
     t.datetime "updated_at",                null: false
   end
 
-  create_table "pages", force: :cascade do |t|
-    t.string   "header",     limit: 255
-    t.string   "title",      limit: 255
-    t.text     "page",       limit: 65535
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
-  end
-
 end
