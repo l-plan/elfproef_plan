@@ -1,3 +1,5 @@
+###### 0.0.5
+removed .ds_store-files from repo
 ###### 0.0.4
 added validation for dutch tax-number
 refactored ElfProef
