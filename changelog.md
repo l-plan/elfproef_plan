@@ -1,3 +1,8 @@
+###### 0.0.4
+added validation for dutch tax-number
+refactored ElfProef
+refactored RexEx functions
+
 ###### 0.0.3
 start logging changes
 

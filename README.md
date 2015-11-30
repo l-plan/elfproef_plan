@@ -69,9 +69,20 @@ or optional
 validates :my_attribute_name, rekeningnummer: {message: "this message overrides the default"}
 ```
 
+
+```ruby
+validates :my_attribute_name, loonheffingennummer: true
+```
+or optional
+
+```ruby
+validates :my_attribute_name, loonheffingennummer: {message: "this message overrides the default"}
+```
+
 it will handle validations just like rails does with other validations.
 
 the rekening-validation just validates the plain, old accountnumber. Validation of BIC-code is yet to be implemented.
+
 
 ## elfproef.js.coffee
 
@@ -81,8 +92,10 @@ ElfProef takes an value, and validates the given number/string.
 
 * it calls ElfProef.new(@value).validRek() to check a bank-account-number
 
-To use these client-side checks, just add a class "checkMyBsn" or "checkMyRekening" to your input-field.
-Add a div with class "rekening_message" or "bsn_message" to yout form to display the returned message.
+* it calls ElfProef.new(@value).validLoonheffingennummer() to check a tax-number
+
+To use these client-side checks, just add a class "checkMyBsn","checkMyRekening" or "checkMyLoonheffing" to your input-field.
+Add a div with class "rekening_message", "bsn_message" or "loonheffing_message" to your form to display the returned message.
 
 
 The code can be included by requiring elfproef_plan, or just the elfproef-file:
