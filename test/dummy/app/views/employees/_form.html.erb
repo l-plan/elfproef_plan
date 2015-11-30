@@ -20,15 +20,28 @@
     <%= f.text_field :number , class: 'checkMyBsn'%>
 
   </div>
-  <div class = "bsn_message"></div>
+  <div class = "bsn_message"> </div>
 
   <div class="field">
     <%= f.label :accountnumber %><br>
     <%= f.text_field :accountnumber , class: 'checkMyRekening'%>
 
   </div>
-  <div class = "rekening_message"></div>
+
+  <div class = "rekening_message"> </div>
+
+
+
+
+  <div class="field">
+    <%= f.label :taxnumber %><br>
+    <%= f.text_field :taxnumber , class: 'checkMyLoonheffing'%>
+
+  </div>
+  <div class = "loonheffing_message"> </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
+
 <% end %>

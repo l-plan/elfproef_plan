@@ -2,7 +2,7 @@ require 'test_helper'
 
 describe Employee do
 	before do
-		@employee = Employee.new(name: 'Jantje', number: 123456782, accountnumber: 376815914)
+		@employee = Employee.new(name: 'Jantje', number: 123456782, accountnumber: 376815914, taxnumber: '123456782L01')
 	end
 
 

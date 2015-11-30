@@ -20,7 +20,7 @@ class EmployeesControllerTest < ActionController::TestCase
   test "should create employee" do
     assert_difference('Employee.count') do
 
-      post :create, employee: { name: @employee.name, number: @employee.number , accountnumber: @employee.accountnumber}
+      post :create, employee: { name: @employee.name, number: @employee.number , accountnumber: @employee.accountnumber ,  taxnumber: '123456782L01'}
 
     end
 

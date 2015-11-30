@@ -4,6 +4,7 @@ class CreateEmployees < ActiveRecord::Migration
       t.string :name
       t.integer :number
       t.integer :accountnumber
+      t.string :taxnumber
 
       t.timestamps null: false
     end

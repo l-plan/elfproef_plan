@@ -17,8 +17,17 @@ ActiveRecord::Schema.define(version: 20151120090423) do
     t.string   "name",          limit: 255
     t.integer  "number",        limit: 4
     t.integer  "accountnumber", limit: 4
+    t.string   "taxnumber",     limit: 255
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
+  end
+
+  create_table "pages", force: :cascade do |t|
+    t.string   "header",     limit: 255
+    t.string   "title",      limit: 255
+    t.text     "page",       limit: 65535
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
 end

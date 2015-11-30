@@ -18,7 +18,42 @@ describe ElfproefPlan::ElfProef do
     it "check nr with input that is too short" do
     	@elfproef = ElfproefPlan::ElfProef.new(1234)
     	@elfproef.nr.must_equal [1, 2, 3, 4]
+
     end
+
+    it "check subnrwith input that is too short" do
+      @elfproef = ElfproefPlan::ElfProef.new(1234)
+      @elfproef.subnr.must_equal []
+
+    end
+
+
+
+    describe "check nr with input with loonheffingennummer" do
+      before do
+        @elfproef = ElfproefPlan::ElfProef.new('123456782L01')
+      end
+
+      it 'test @nr moet nil zijn' do
+        @elfproef.nr.must_equal [1,2,3,4,5,6,7,8,2]
+      end
+
+      # it 'test @nummer moet getal zijn' do
+      #   @elfproef.match.must_equal "123456782"
+      # end
+
+      it 'test @subnr moet getal zijn' do
+        @elfproef.subnr.must_equal [0,1]
+      end
+
+      it 'test @letter moet L zijn' do
+        @elfproef.letter.must_equal ["L"]
+      end
+
+    end
+
+
+
   end
 
   describe "check elfproef validBsn method" do
