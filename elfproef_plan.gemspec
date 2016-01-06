@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md", "changelog.md"]
   s.test_files = Dir["test/**/*"]
 
-  s.add_dependency "rails", "~>4.0"
+  s.add_dependency "rails", ">=4.0"
 
 
 
@@ -27,7 +27,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency "jquery-rails"
   s.add_development_dependency "mysql2", "0.3.18"
   s.add_development_dependency "pry-rails"
-  s.add_development_dependency 'coffee-rails', '~> 4.0'
+  s.add_development_dependency 'coffee-rails', '>= 4.0'
   s.add_development_dependency "minitest-reporters"
   s.add_development_dependency 'color_pound_spec_reporter'
 
